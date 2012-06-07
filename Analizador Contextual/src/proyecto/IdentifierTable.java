@@ -143,7 +143,7 @@ public final class IdentifierTable {
             String tipoDeclarado = TypeUtilities.getClass(param.fpl0);
             String tipoEnviado = list.e0.visit(visitor, arg).toString();
             if (!tipoDeclarado.equals(tipoEnviado)) {
-                throw new Exception(metodo + ", parámetro " + nivel + ": Se esperaba un " + tipoDeclarado + ". Se envió un " + tipoEnviado);
+                throw new Exception(metodo + ": Se esperaba un " + tipoDeclarado + ". Se envió un " + tipoEnviado);
             }
         } // Comparar que 
         else if (FPL.getClass() == AFormalParameterListRest.class
